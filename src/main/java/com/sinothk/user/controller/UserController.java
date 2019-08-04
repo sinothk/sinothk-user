@@ -27,4 +27,18 @@ public class UserController {
 
         return ResultData.error("产出Id = ");
     }
+
+    @GetMapping("/add2")
+//    @Transactional
+    public ResultData<String> add2() {
+        // http://localhost:11000/user/add2
+        //
+//        UserEntity userEntity = new UserEntity();
+//        userEntity.setUserName("liangyt");
+////        userEntity.setUserPwd(password);
+//        return roleService.addUser(userEntity);
+
+
+        return ResultData.error("Open 接口 = ");
+    }
 }
