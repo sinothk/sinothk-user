@@ -1,7 +1,6 @@
 package com.sinothk.user.controller;
 
 import com.sinothk.base.entity.ResultData;
-import com.sinothk.base.utils.AccountUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +12,7 @@ public class UserController {
     @GetMapping("/add")
 //    @Transactional
     public ResultData<String> userRegister() {
-        // http://localhost:11000/sinothk-user/user/add
+        // http://localhost:11000/user/add
         //
 
 
