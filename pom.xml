@@ -41,6 +41,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!--sinothk-base-->
         <dependency>
             <groupId>com.sinothk.base</groupId>
             <artifactId>sinothk-base</artifactId>
