@@ -2,6 +2,7 @@ package com.sinothk.user.service.impl;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.sinothk.base.entity.ResultData;
 import com.sinothk.base.utils.AccountUtil;
 import com.sinothk.base.utils.JWTUtil;
@@ -107,5 +108,19 @@ public class UserServerImpl implements UserService {
     public ResultData<UserEntity> getUserInfo(String userName) {
         UserEntity userEntity = selectUserByUsername(userName);
         return ResultData.success(userEntity);
+    }
+
+    @Override
+    public ResultData<UserEntity> update(UserEntity userEntity) {
+        UpdateWrapper<UserEntity> wrapper = new UpdateWrapper<>();
+        wrapper.lambda().eq(UserEntity::getUserName, userEntity.getUserName());
+        try {
+            userMapper.update(userEntity, wrapper);
+
+            UserEntity dbUser = selectUserByUsername(userEntity.getUserName());
+            return ResultData.success(dbUser);
+        } catch (Exception e) {
+            return ResultData.error(e.getMessage());
+        }
     }
 }

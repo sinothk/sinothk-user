@@ -10,4 +10,6 @@ public interface UserService {
     ResultData<UserEntity> getUserInfo(String userName);
 
     ResultData<UserEntity> login(String account, String password);
+
+    ResultData<UserEntity> update(UserEntity userEntity);
 }

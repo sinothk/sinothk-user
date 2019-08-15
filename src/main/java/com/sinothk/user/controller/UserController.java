@@ -41,19 +41,10 @@ public class UserController {
         return userService.getUserInfo(userName);
     }
 
-    @GetMapping("/add2")
-//    @Transactional
-    public ResultData<String> add2(@ApiParam(value = "token") @RequestHeader("token") String token, @RequestHeader("userName") String userName) {
-        // http://localhost:11000/user/add2
-        //
-//        UserEntity userEntity = new UserEntity();
-//        userEntity.setUserName("liangyt");
-////        userEntity.setUserPwd(password);
-//        return roleService.addUser(userEntity);
-
-        System.out.println("token = " + token);
-        System.out.println("userName = " + userName);
-
-        return ResultData.error("Open 接口 = ");
+    @ApiOperation(value = "用户更新", notes = "用户更新")
+    @PostMapping("/update")
+    public ResultData<UserEntity> update(@ApiParam(value = "用户信息") @RequestBody UserEntity userEntity) {
+        // http://localhost:11000/user/add
+        return userService.update(userEntity);
     }
 }
