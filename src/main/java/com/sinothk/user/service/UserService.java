@@ -5,7 +5,7 @@ import com.sinothk.user.domain.UserEntity;
 
 public interface UserService {
 
-    ResultData<Boolean> add(UserEntity userEntity);
+    ResultData<UserEntity> add(UserEntity userEntity);
 
     ResultData<UserEntity> getUserInfo(String userName);
 

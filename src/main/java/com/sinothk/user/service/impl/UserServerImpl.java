@@ -3,6 +3,7 @@ package com.sinothk.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sinothk.base.entity.ResultData;
+import com.sinothk.base.utils.AccountUtil;
 import com.sinothk.base.utils.JWTUtil;
 import com.sinothk.base.utils.StringUtil;
 import com.sinothk.user.domain.UserEntity;
@@ -20,9 +21,33 @@ public class UserServerImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public ResultData<Boolean> add(UserEntity userEntity) {
-        userMapper.insert(userEntity);
-        return ResultData.success(true);
+    public ResultData<UserEntity> add(UserEntity userEntity) {
+        if (userEntity == null) {
+            return ResultData.error("用户信息不能为空");
+        }
+
+        if (StringUtil.isEmpty(userEntity.getUserName())) {
+            return ResultData.error("用户名不能为空");
+        }
+
+        if (StringUtil.isEmpty(userEntity.getUserPwd())) {
+            return ResultData.error("密码不能为空");
+        }
+
+        List<UserEntity> dbUsers = selectUsersByUsername(userEntity.getUserName());
+        if (dbUsers == null || dbUsers.size() == 0) {
+            try {
+                long account = AccountUtil.create();
+                userEntity.setAccount(String.valueOf(account));
+                userMapper.insert(userEntity);
+
+                return ResultData.success(userEntity);
+            } catch (Exception e) {
+                return ResultData.error(e.getMessage());
+            }
+        } else {
+            return ResultData.error("用户名已被占用");
+        }
     }
 
     @Override
@@ -63,6 +88,16 @@ public class UserServerImpl implements UserService {
                 return null;
             }
             return userList.get(0);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private List<UserEntity> selectUsersByUsername(String account) {
+        QueryWrapper<UserEntity> wrapper = new QueryWrapper<>();
+        wrapper.lambda().eq(UserEntity::getUserName, account);
+        try {
+            return userMapper.selectList(wrapper);
         } catch (Exception e) {
             return null;
         }

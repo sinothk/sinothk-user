@@ -20,8 +20,8 @@ public class UserController {
     private UserService userService;
 
     @ApiOperation(value = "用户新增", notes = "用户新增")
-    @GetMapping("/add")
-    public ResultData<Boolean> add(@ApiParam(value = "用户信息") @RequestBody UserEntity userEntity) {
+    @PostMapping("/add")
+    public ResultData<UserEntity> add(@ApiParam(value = "用户信息") @RequestBody UserEntity userEntity) {
         // http://localhost:11000/user/add
         return userService.add(userEntity);//ResultData.error("产出Id = ");
     }
