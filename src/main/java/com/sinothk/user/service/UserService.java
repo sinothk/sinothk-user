@@ -8,4 +8,6 @@ public interface UserService {
     ResultData<Boolean> add(UserEntity userEntity);
 
     ResultData<UserEntity> getUserInfo(String userName);
+
+    ResultData<UserEntity> login(String account, String password);
 }

@@ -26,6 +26,13 @@ public class UserController {
         return userService.add(userEntity);//ResultData.error("产出Id = ");
     }
 
+    @ApiOperation(value = "用户登录", notes = "用户登录")
+    @PostMapping("/login")
+    public ResultData<UserEntity> login(@ApiParam(value = "account") @RequestParam("account") String account, @ApiParam(value = "password") @RequestParam("password") String password) {
+        // http://localhost:11000/user/login
+        return userService.login(account, password);
+    }
+
     @ApiOperation(value = "获取用户信息", notes = "获取用户信息")
     @GetMapping("/getUserInfo")
     public ResultData<UserEntity> getUserInfo(@ApiParam(value = "token") @RequestHeader("token") String token) {
