@@ -68,6 +68,10 @@ public class UserEntity {
     @TableField("u_phone_num")
     private String phoneNum;
 
+    @ApiModelProperty(value = "用户状态")
+    @TableField("user_status")
+    private Integer userStatus;
+
     // ==================================================
     @ApiModelProperty(value = "角色")
     @TableField(exist = false)

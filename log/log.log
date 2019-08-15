@@ -1144,3 +1144,239 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 2019-08-15 17:44:39.860 DEBUG 2104 --- [http-nio-11000-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
 2019-08-15 17:44:39.860 DEBUG 2104 --- [http-nio-11000-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=200, msg=成功, data=UserEntity(id=null, account=10009, userName=五星红旗, nickname=null,  (truncated)...]
 2019-08-15 17:44:39.861 DEBUG 2104 --- [http-nio-11000-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 17:47:17.224  INFO 2104 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-08-15 17:52:17.225  INFO 2104 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-08-15 17:56:21.459  INFO 5736 --- [main] com.sinothk.user.SinothkUserApplication  : The following profiles are active: db
+2019-08-15 17:56:22.515  INFO 5736 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=779bb0d0-868e-3050-894b-e1c1f7d5f8c9
+2019-08-15 17:56:22.617  INFO 5736 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ee4b29f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-15 17:56:22.636  INFO 5736 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a652cf6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-15 17:56:22.911  INFO 5736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 11000 (http)
+2019-08-15 17:56:22.936  INFO 5736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-15 17:56:22.936  INFO 5736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-15 17:56:22.944  INFO 5736 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-08-15 17:56:22.944  INFO 5736 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-08-15 17:56:22.944  INFO 5736 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-15 17:56:22.945  INFO 5736 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-15 17:56:23.999  INFO 5736 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-08-15 17:56:24.211  INFO 5736 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-15 17:56:24.211 DEBUG 5736 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-08-15 17:56:24.211  INFO 5736 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2732 ms
+2019-08-15 17:56:24.491  INFO 5736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-15 17:56:24.723  INFO 5736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-15 17:56:25.290 DEBUG 5736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2019-08-15 17:56:25.439  INFO 5736 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-08-15 17:56:25.473  WARN 5736 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-08-15 17:56:25.473  INFO 5736 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-08-15 17:56:25.479  WARN 5736 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-08-15 17:56:25.480  INFO 5736 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-08-15 17:56:25.556 DEBUG 5736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-08-15 17:56:25.665  INFO 5736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-15 17:56:25.763 DEBUG 5736 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-08-15 17:56:25.797 DEBUG 5736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-08-15 17:56:25.805 DEBUG 5736 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-08-15 17:56:27.414  INFO 5736 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-08-15 17:56:28.821  INFO 5736 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-08-15 17:56:28.972  INFO 5736 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-08-15 17:56:29.006  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-08-15 17:56:29.488  INFO 5736 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-08-15 17:56:29.488  INFO 5736 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-08-15 17:56:29.630  INFO 5736 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-08-15 17:56:29.630  INFO 5736 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-08-15 17:56:29.848  INFO 5736 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-08-15 17:56:30.125  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-08-15 17:56:30.125  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-08-15 17:56:30.125  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-08-15 17:56:30.125  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-08-15 17:56:30.125  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-08-15 17:56:30.126  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-08-15 17:56:30.126  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-08-15 17:56:30.291  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-08-15 17:56:30.294  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-08-15 17:56:30.296  INFO 5736 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-08-15 17:56:30.301  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1565862990299 with initial instances count: 1
+2019-08-15 17:56:30.303  INFO 5736 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SINOTHK-USER with eureka with status UP
+2019-08-15 17:56:30.303  INFO 5736 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1565862990303, current=UP, previous=STARTING]
+2019-08-15 17:56:30.305  INFO 5736 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SINOTHK-USER/sinothk-user: registering service...
+2019-08-15 17:56:30.307  INFO 5736 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-08-15 17:56:30.334  INFO 5736 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-08-15 17:56:30.353  INFO 5736 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SINOTHK-USER/sinothk-user - registration status: 204
+2019-08-15 17:56:30.378  INFO 5736 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-08-15 17:56:30.573  INFO 5736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 11000 (http) with context path ''
+2019-08-15 17:56:30.574  INFO 5736 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 11000
+2019-08-15 17:56:30.575  INFO 5736 --- [main] com.sinothk.user.SinothkUserApplication  : Started SinothkUserApplication in 13.061 seconds (JVM running for 14.341)
+2019-08-15 17:56:36.674  INFO 5736 --- [http-nio-11000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-15 17:56:36.674  INFO 5736 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-15 17:56:36.675 DEBUG 5736 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-08-15 17:56:36.684 DEBUG 5736 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-08-15 17:56:36.684  INFO 5736 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-08-15 17:56:36.694 DEBUG 5736 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/doc.html", parameters={}
+2019-08-15 17:56:36.704 DEBUG 5736 --- [http-nio-11000-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-08-15 17:56:36.707 DEBUG 5736 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2019-08-15 17:56:36.753 DEBUG 5736 --- [http-nio-11000-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/webjars/bycdao-ui/images/api.ico", parameters={}
+2019-08-15 17:56:36.754 DEBUG 5736 --- [http-nio-11000-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+2019-08-15 17:56:36.781 DEBUG 5736 --- [http-nio-11000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 17:56:37.043 DEBUG 5736 --- [http-nio-11000-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-resources", parameters={}
+2019-08-15 17:56:37.045 DEBUG 5736 --- [http-nio-11000-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-08-15 17:56:37.066 DEBUG 5736 --- [http-nio-11000-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 17:56:37.066 DEBUG 5736 --- [http-nio-11000-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[springfox.documentation.swagger.web.SwaggerResource@257e1158]]
+2019-08-15 17:56:37.074 DEBUG 5736 --- [http-nio-11000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 17:56:37.084 DEBUG 5736 --- [http-nio-11000-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/v2/api-docs?group=%E7%94%A8%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3", parameters={masked}
+2019-08-15 17:56:37.195 DEBUG 5736 --- [http-nio-11000-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 17:56:37.195 DEBUG 5736 --- [http-nio-11000-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.spring.web.json.Json@3bffb33c]
+2019-08-15 17:56:37.196 DEBUG 5736 --- [http-nio-11000-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 17:58:24.783 DEBUG 5736 --- [http-nio-11000-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/user/update", parameters={}
+2019-08-15 17:58:24.784 DEBUG 5736 --- [http-nio-11000-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.update(com.sinothk.user.domain.UserEntity)
+2019-08-15 17:58:24.800 DEBUG 5736 --- [http-nio-11000-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserEntity(id=null, account=null, userName=sinothk, nickname=华维公社, avatar=null, userPwd=null, email= (truncated)...]
+2019-08-15 17:58:24.989 DEBUG 5736 --- [http-nio-11000-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 17:58:24.989 DEBUG 5736 --- [http-nio-11000-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=200, msg=成功, data=UserEntity(id=1, account=9999, userName=sinothk, nickname=华维公社, a (truncated)...]
+2019-08-15 17:58:24.996 DEBUG 5736 --- [http-nio-11000-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 17:59:20.115 DEBUG 5736 --- [http-nio-11000-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/user/update", parameters={}
+2019-08-15 17:59:20.117 DEBUG 5736 --- [http-nio-11000-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.update(com.sinothk.user.domain.UserEntity)
+2019-08-15 17:59:20.117 DEBUG 5736 --- [http-nio-11000-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UserEntity(id=null, account=null, userName=sinothk, nickname=null, avatar=null, userPwd=null, email= (truncated)...]
+2019-08-15 17:59:20.182 DEBUG 5736 --- [http-nio-11000-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 17:59:20.183 DEBUG 5736 --- [http-nio-11000-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=200, msg=成功, data=UserEntity(id=1, account=9999, userName=sinothk, nickname=华维公社, a (truncated)...]
+2019-08-15 17:59:20.183 DEBUG 5736 --- [http-nio-11000-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:01:30.129  INFO 5736 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-08-15 18:05:15.853  INFO 12180 --- [main] com.sinothk.user.SinothkUserApplication  : The following profiles are active: db
+2019-08-15 18:05:16.860  INFO 12180 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=779bb0d0-868e-3050-894b-e1c1f7d5f8c9
+2019-08-15 18:05:16.996  INFO 12180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$529aa206] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-15 18:05:17.022  INFO 12180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6eb4a503] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-15 18:05:17.321  INFO 12180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 11000 (http)
+2019-08-15 18:05:17.362  INFO 12180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-15 18:05:17.362  INFO 12180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-15 18:05:17.371  INFO 12180 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-08-15 18:05:17.371  INFO 12180 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-08-15 18:05:17.371  INFO 12180 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-15 18:05:17.371  INFO 12180 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-15 18:05:18.425  INFO 12180 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-08-15 18:05:18.605  INFO 12180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-15 18:05:18.605 DEBUG 12180 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-08-15 18:05:18.605  INFO 12180 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2735 ms
+2019-08-15 18:05:18.837  INFO 12180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-15 18:05:19.040  INFO 12180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-15 18:05:19.558 DEBUG 12180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2019-08-15 18:05:19.645  INFO 12180 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-08-15 18:05:19.670  WARN 12180 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-08-15 18:05:19.670  INFO 12180 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-08-15 18:05:19.674  WARN 12180 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-08-15 18:05:19.675  INFO 12180 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-08-15 18:05:19.725 DEBUG 12180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-08-15 18:05:19.826  INFO 12180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-15 18:05:19.912 DEBUG 12180 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-08-15 18:05:19.946 DEBUG 12180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-08-15 18:05:19.959 DEBUG 12180 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-08-15 18:05:21.599  INFO 12180 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-08-15 18:05:23.030  INFO 12180 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-08-15 18:05:23.185  INFO 12180 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-08-15 18:05:23.220  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-08-15 18:05:23.789  INFO 12180 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-08-15 18:05:23.790  INFO 12180 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-08-15 18:05:23.916  INFO 12180 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-08-15 18:05:23.916  INFO 12180 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-08-15 18:05:24.136  INFO 12180 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-08-15 18:05:24.429  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-08-15 18:05:24.430  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-08-15 18:05:24.430  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-08-15 18:05:24.430  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-08-15 18:05:24.430  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-08-15 18:05:24.430  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-08-15 18:05:24.430  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-08-15 18:05:24.599  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-08-15 18:05:24.602  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-08-15 18:05:24.605  INFO 12180 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-08-15 18:05:24.609  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1565863524608 with initial instances count: 1
+2019-08-15 18:05:24.611  INFO 12180 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SINOTHK-USER with eureka with status UP
+2019-08-15 18:05:24.611  INFO 12180 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1565863524611, current=UP, previous=STARTING]
+2019-08-15 18:05:24.614  INFO 12180 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SINOTHK-USER/sinothk-user: registering service...
+2019-08-15 18:05:24.614  INFO 12180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-08-15 18:05:24.642  INFO 12180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-08-15 18:05:24.663  INFO 12180 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SINOTHK-USER/sinothk-user - registration status: 204
+2019-08-15 18:05:24.690  INFO 12180 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-08-15 18:05:24.892  INFO 12180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 11000 (http) with context path ''
+2019-08-15 18:05:24.893  INFO 12180 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 11000
+2019-08-15 18:05:24.895  INFO 12180 --- [main] com.sinothk.user.SinothkUserApplication  : Started SinothkUserApplication in 13.031 seconds (JVM running for 14.28)
+2019-08-15 18:05:27.941  INFO 12180 --- [http-nio-11000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-15 18:05:27.941  INFO 12180 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-15 18:05:27.942 DEBUG 12180 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-08-15 18:05:27.955 DEBUG 12180 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-08-15 18:05:27.955  INFO 12180 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-08-15 18:05:27.967 DEBUG 12180 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:05:27.973 DEBUG 12180 --- [http-nio-11000-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:05:28.092 DEBUG 12180 --- [http-nio-11000-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:05:28.092 DEBUG 12180 --- [http-nio-11000-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户不存在, data=null]]
+2019-08-15 18:05:28.103 DEBUG 12180 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:05:50.886 DEBUG 12180 --- [http-nio-11000-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:05:50.887 DEBUG 12180 --- [http-nio-11000-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:05:50.947 DEBUG 12180 --- [http-nio-11000-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:05:50.947 DEBUG 12180 --- [http-nio-11000-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=200, msg=成功, data=UserEntity(id=51, account=10009, userName=五星红旗, nickname=null, av (truncated)...]
+2019-08-15 18:05:50.955 DEBUG 12180 --- [http-nio-11000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:01.422 DEBUG 12180 --- [http-nio-11000-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:01.423 DEBUG 12180 --- [http-nio-11000-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:01.427 DEBUG 12180 --- [http-nio-11000-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:01.428 DEBUG 12180 --- [http-nio-11000-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:01.429 DEBUG 12180 --- [http-nio-11000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:02.486 DEBUG 12180 --- [http-nio-11000-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:02.488 DEBUG 12180 --- [http-nio-11000-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:02.493 DEBUG 12180 --- [http-nio-11000-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:02.493 DEBUG 12180 --- [http-nio-11000-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:02.495 DEBUG 12180 --- [http-nio-11000-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:03.001 DEBUG 12180 --- [http-nio-11000-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:03.002 DEBUG 12180 --- [http-nio-11000-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:03.005 DEBUG 12180 --- [http-nio-11000-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:03.006 DEBUG 12180 --- [http-nio-11000-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:03.007 DEBUG 12180 --- [http-nio-11000-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:03.178 DEBUG 12180 --- [http-nio-11000-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:03.178 DEBUG 12180 --- [http-nio-11000-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:03.183 DEBUG 12180 --- [http-nio-11000-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:03.183 DEBUG 12180 --- [http-nio-11000-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:03.183 DEBUG 12180 --- [http-nio-11000-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:03.479 DEBUG 12180 --- [http-nio-11000-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:03.480 DEBUG 12180 --- [http-nio-11000-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:03.483 DEBUG 12180 --- [http-nio-11000-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:03.483 DEBUG 12180 --- [http-nio-11000-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:03.484 DEBUG 12180 --- [http-nio-11000-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:03.654 DEBUG 12180 --- [http-nio-11000-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:03.654 DEBUG 12180 --- [http-nio-11000-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:03.658 DEBUG 12180 --- [http-nio-11000-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:03.658 DEBUG 12180 --- [http-nio-11000-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:03.659 DEBUG 12180 --- [http-nio-11000-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:03.823 DEBUG 12180 --- [http-nio-11000-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:03.824 DEBUG 12180 --- [http-nio-11000-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:03.827 DEBUG 12180 --- [http-nio-11000-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:03.827 DEBUG 12180 --- [http-nio-11000-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:03.828 DEBUG 12180 --- [http-nio-11000-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:03.977 DEBUG 12180 --- [http-nio-11000-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:03.978 DEBUG 12180 --- [http-nio-11000-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:03.982 DEBUG 12180 --- [http-nio-11000-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:03.982 DEBUG 12180 --- [http-nio-11000-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:03.983 DEBUG 12180 --- [http-nio-11000-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:04.151 DEBUG 12180 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:04.151 DEBUG 12180 --- [http-nio-11000-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:04.156 DEBUG 12180 --- [http-nio-11000-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:04.156 DEBUG 12180 --- [http-nio-11000-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:04.157 DEBUG 12180 --- [http-nio-11000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:04.313 DEBUG 12180 --- [http-nio-11000-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:04.313 DEBUG 12180 --- [http-nio-11000-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:04.317 DEBUG 12180 --- [http-nio-11000-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:04.317 DEBUG 12180 --- [http-nio-11000-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:04.318 DEBUG 12180 --- [http-nio-11000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:04.469 DEBUG 12180 --- [http-nio-11000-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:04.469 DEBUG 12180 --- [http-nio-11000-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:04.473 DEBUG 12180 --- [http-nio-11000-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:04.474 DEBUG 12180 --- [http-nio-11000-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:04.475 DEBUG 12180 --- [http-nio-11000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:04.632 DEBUG 12180 --- [http-nio-11000-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:04.633 DEBUG 12180 --- [http-nio-11000-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:04.637 DEBUG 12180 --- [http-nio-11000-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:04.637 DEBUG 12180 --- [http-nio-11000-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:04.638 DEBUG 12180 --- [http-nio-11000-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:04.794 DEBUG 12180 --- [http-nio-11000-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:04.795 DEBUG 12180 --- [http-nio-11000-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:04.799 DEBUG 12180 --- [http-nio-11000-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:04.799 DEBUG 12180 --- [http-nio-11000-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:04.800 DEBUG 12180 --- [http-nio-11000-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-08-15 18:06:04.955 DEBUG 12180 --- [http-nio-11000-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/user/login", parameters={masked}
+2019-08-15 18:06:04.955 DEBUG 12180 --- [http-nio-11000-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.sinothk.base.entity.ResultData<com.sinothk.user.domain.UserEntity> com.sinothk.user.controller.UserController.login(java.lang.String,java.lang.String)
+2019-08-15 18:06:04.959 DEBUG 12180 --- [http-nio-11000-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-08-15 18:06:04.960 DEBUG 12180 --- [http-nio-11000-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ResultData [code=600, msg=用户已被禁用, data=null]]
+2019-08-15 18:06:04.962 DEBUG 12180 --- [http-nio-11000-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

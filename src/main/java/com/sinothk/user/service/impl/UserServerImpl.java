@@ -67,6 +67,10 @@ public class UserServerImpl implements UserService {
             return ResultData.error("用户不存在");
         }
 
+        if (dbUser.getUserStatus() == 1) {
+            return ResultData.error("用户已被禁用");
+        }
+
         if (!password.equals(dbUser.getUserPwd())) {
             return ResultData.error("密码不正确");
         }
