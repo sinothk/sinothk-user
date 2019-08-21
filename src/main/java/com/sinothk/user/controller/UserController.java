@@ -41,6 +41,12 @@ public class UserController {
         return userService.getUserInfo(userName);
     }
 
+    @GetMapping("/getUserInfoTest")
+    public ResultData<UserEntity> getUserInfoTest() {
+        // http://192.168.124.3:11000/user/getUserInfoTest ResultData.success("ok");//
+        return userService.getUserInfo("liangyt");
+    }
+
     @ApiOperation(value = "用户更新", notes = "用户更新")
     @PostMapping("/update")
     public ResultData<UserEntity> update(@ApiParam(value = "用户信息") @RequestBody UserEntity userEntity) {
