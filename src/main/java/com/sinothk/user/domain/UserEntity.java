@@ -9,6 +9,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Date;
+
 @ApiModel(description = "用户信息")
 @Data
 @ToString
@@ -71,6 +73,10 @@ public class UserEntity {
     @ApiModelProperty(value = "用户状态")
     @TableField("user_status")
     private Integer userStatus;
+
+    @ApiModelProperty(value = "用户生日")
+    @TableField("user_borthday")
+    private Date userBorthday;
 
     // ==================================================
     @ApiModelProperty(value = "角色")
