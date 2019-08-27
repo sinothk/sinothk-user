@@ -1,4 +1,4 @@
-package com.sinothk.user.utils;
+package com.sinothk.user.utils.wx;
 
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;

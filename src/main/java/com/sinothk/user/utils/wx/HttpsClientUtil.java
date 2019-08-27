@@ -1,4 +1,4 @@
-package com.sinothk.user.utils;
+package com.sinothk.user.utils.wx;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

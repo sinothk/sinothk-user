@@ -20,6 +20,15 @@ public class WxUserOpenIdEntity {
 //    u_account  varchar(64)  utf8_general_ci  YES     UNI     (NULL)                   select,insert,update,references  系统用户account
 //    open_id    varchar(64)  utf8_general_ci  YES     UNI     (NULL)                   select,insert,update,references  微信OpenId
 
+
+    public WxUserOpenIdEntity() {
+    }
+
+    public WxUserOpenIdEntity(String openId, String account) {
+        this.openId = openId;
+        this.account = account;
+    }
+
     @ApiModelProperty(value = "ID")
     @TableId(value = "id", type = IdType.INPUT)
     private Long id;

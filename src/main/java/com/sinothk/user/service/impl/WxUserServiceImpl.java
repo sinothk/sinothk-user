@@ -1,10 +1,8 @@
 package com.sinothk.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.sinothk.user.domain.UserEntity;
-import com.sinothk.user.domain.WxApiEntity;
-import com.sinothk.user.domain.WxUserEntity;
-import com.sinothk.user.domain.WxUserOpenIdEntity;
+import com.sinothk.base.utils.AccountUtil;
+import com.sinothk.user.domain.*;
 import com.sinothk.user.repository.UserMapper;
 import com.sinothk.user.repository.WxUserOpenIdMapper;
 import com.sinothk.user.service.WxUserService;
@@ -23,18 +21,40 @@ public class WxUserServiceImpl implements WxUserService {
     private WxUserOpenIdMapper wxUserOpenIdMapper;
 
     @Override
-    public WxUserEntity saveOrFindUser(WxApiEntity wxApiEntity) {
+    public WxUserEntity saveOrFindUser(WxUserVo wxApiEntity) {
         QueryWrapper<WxUserOpenIdEntity> wrapper = new QueryWrapper<>();
         wrapper.lambda().eq(WxUserOpenIdEntity::getOpenId, wxApiEntity.getOpenid());
 
-        // 查询用户是否存在
+        // 查询微信用户是否存在
         WxUserOpenIdEntity wxUserOpenIdEntity = wxUserOpenIdMapper.selectOne(wrapper);
         if (wxUserOpenIdEntity == null) {
-            // 不存在注册
+            // 不存在当前用户，则注册
+            String account = String.valueOf(AccountUtil.create());
+            // 保存微信账号信息
+            WxUserOpenIdEntity wxUserOpenIdNewEntity = new WxUserOpenIdEntity(wxApiEntity.getOpenid(), account);
+            wxUserOpenIdMapper.insert(wxUserOpenIdNewEntity);
 
+            // 保存注册用户
+            UserEntity userEntity = new UserEntity();
+            userEntity.setAccount(account);
+            userEntity.setUserName(account);
+            userEntity.setAvatar(wxApiEntity.getAvatarUrl());
+            userEntity.setSex(wxApiEntity.getGender());
+            userEntity.setNickname(wxApiEntity.getNickName());
+            userEntity.setUserPwd("123456");
 
+            userMapper.insert(userEntity);
 
-            return null;
+            // 构建用户信息
+            QueryWrapper<UserEntity> userNewWrapper = new QueryWrapper<>();
+            userNewWrapper.lambda().eq(UserEntity::getAccount, account);
+            UserEntity userNewEntity = userMapper.selectOne(userNewWrapper);
+
+            // 查出新数据赋值
+            WxUserEntity wxUserEntity = new WxUserEntity();
+            BeanUtils.copyProperties(userNewEntity, wxUserEntity);
+            wxUserEntity.setOpenId(wxApiEntity.getOpenid());
+            return wxUserEntity;
         } else {
             try { // 用户已存在
                 QueryWrapper<UserEntity> userWrapper = new QueryWrapper<>();
@@ -43,9 +63,7 @@ public class WxUserServiceImpl implements WxUserService {
                 UserEntity userEntity = userMapper.selectOne(userWrapper);
                 WxUserEntity wxUserEntity = new WxUserEntity();
                 BeanUtils.copyProperties(userEntity, wxUserEntity);
-                // 设置微信信息
                 wxUserEntity.setOpenId(wxUserOpenIdEntity.getOpenId());
-                wxUserEntity.setSession_key(wxApiEntity.getSession_key());
                 return wxUserEntity;
             } catch (Exception e) {
                 return null;
